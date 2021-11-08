@@ -19,5 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('students-info',[StudentInfoControllerAPI::class,'index']);
+Route::post('login',[StudentInfoControllerAPI::class,'login']);
+Route::post('register',[StudentInfoControllerAPI::class,'register']);
+Route::post('reset-password',[StudentInfoControllerAPI::class,'resetPassword']);
 

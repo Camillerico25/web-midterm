@@ -29,3 +29,5 @@ Route::get('/home', [
 Route::resource('passengerStats', App\Http\Controllers\PassengerStatController::class);
 
 Route::resource('studentInfos', App\Http\Controllers\StudentInfoController::class);
+
+Route::resource('logs', App\Http\Controllers\LogsController::class);
