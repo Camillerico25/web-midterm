@@ -31,10 +31,7 @@ class StudentInfoControllerAPI extends Controller
             $user->remember_token = $success['token'];
             $user->save();
 
-            // log->id = $user->id
-            // log->log = "Login"
-            // log->logdetails = "User $user->username has logged in into my system"
-            // log->logtype = "API Login"
+
             $logs = new Logs();
             $logs->userid = $user->id;
             $logs->log = "Login";
