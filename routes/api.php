@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\StudentInfoControllerAPI;
+use App\Http\Controllers\API\StudentPostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,8 @@ Route::post('login',[StudentInfoControllerAPI::class,'login']);
 Route::post('register',[StudentInfoControllerAPI::class,'register']);
 Route::post('reset-password',[StudentInfoControllerAPI::class,'resetPassword']);
 
+
+
+Route::get('get-all-posts',[StudentPostController::class,'getAllPosts']);
+Route::get('get-post',[StudentPostController::class,'getPost']);
+Route::get('search-post',[StudentPostController::class,'searchPost']);
